@@ -1,1 +1,21 @@
+@font-face {
+    font-family: "CALORU";
+    src: url("/font/caloru-black.woff");
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "CALORU";
+    font-weight: 900;
+    color: #FFC545;
+    background-image: url("/img/duo-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center -9rem;
+    background-size: 150%;
+}

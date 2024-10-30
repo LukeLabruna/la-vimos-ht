@@ -1,0 +1,19 @@
+.moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    gap: 2rem;
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+}
+
+.moviesContainer a {
+    width: 30%;
+    box-shadow: 0 0 1rem #000000;
+}
+
+.moviesContainer a img {
+    width: 100%;
+}

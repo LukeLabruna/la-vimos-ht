@@ -1,0 +1,38 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #182e33;
+}
+
+header img {
+    width: 8rem;
+}
+
+header input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    color: #FFC545;
+    background-color: #F45454;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 30%;
+    font-family: "CALORU";
+}
+
+header input::placeholder {
+    color: #FFC545;
+    font-family: "CALORU";
+}
+
+header i {
+    font-size: 1.5rem;
+}
