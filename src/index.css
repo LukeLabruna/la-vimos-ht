@@ -14,6 +14,7 @@ body {
     font-weight: 900;
     color: #FFC545;
     background-image: url("/img/duo-bg.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center -9rem;

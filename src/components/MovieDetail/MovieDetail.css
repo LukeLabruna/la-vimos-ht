@@ -1,0 +1,24 @@
+.movieDetail > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem;
+}
+
+.movieDetail > div img {
+    width: 45%;
+}
+
+.movieDetail h2 {
+    font-size: 2.5rem;
+}
+
+.movieDetail p {
+    font-size: 1.5rem;
+}
+
+.movieDetail {
+    width: 50%;
+    margin: 0 auto;
+}

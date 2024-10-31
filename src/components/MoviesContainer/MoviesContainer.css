@@ -5,7 +5,7 @@
     width: 50%;
     margin: 0 auto;
     gap: 2rem;
-    margin-top: 9rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -16,4 +16,10 @@
 
 .moviesContainer a img {
     width: 100%;
+}
+
+main {
+    margin-top: 7rem;
+    text-align: center;
+    text-transform: uppercase;
 }
