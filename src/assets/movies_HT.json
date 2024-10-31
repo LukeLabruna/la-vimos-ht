@@ -3931,5 +3931,14 @@
         "poster_link": "https://image.tmdb.org/t/p/original/aE85MnPIsSoSs3978Noo16BRsKN.jpg",
         "episode_number": 277,
         "id": 1100782
+    },
+    {
+        "film": "Terrifier 3",
+        "film_year": "2024",
+        "episode_name": "66: La próxima película que tenga un personaje que haga un podcast la apagamos",
+        "country_club": true,
+        "poster_link": "https://image.tmdb.org/t/p/original/63xYQj1BwRFielxsBDXvHIJyXVm.jpg",
+        "episode_number": 66,
+        "id": 1034541
     }
 ]
