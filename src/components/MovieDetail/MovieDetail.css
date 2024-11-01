@@ -4,6 +4,8 @@
     align-items: center;
     gap: 3rem;
     margin: 2rem;
+    width: 65%;
+    margin: 1rem auto;
 }
 
 .movieDetail > div img {
@@ -11,14 +13,21 @@
 }
 
 .movieDetail h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    -webkit-text-stroke: 2px #F45454;
+}
+
+.movieDetail span {
+    -webkit-text-stroke: 1px #F45454;
+}
+
+.movieDetail h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
 }
 
 .movieDetail p {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
 }
 
-.movieDetail {
-    width: 50%;
-    margin: 0 auto;
-}

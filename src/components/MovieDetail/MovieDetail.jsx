@@ -1,17 +1,17 @@
 import "./MovieDetail.css"
 
-const MovieDetail = ({ film, film_year, episode_name, country_club, poster_link, episode_number }) => {
+const MovieDetail = ({ film_year, episode_name, country_club, poster_link, episode_number, embed_link, episode_description, original_film_name }) => {
     return (
         <div className="movieDetail">
-            <h2> {film} {film_year}</h2>
+            <h2> {original_film_name} {film_year}</h2>
             <div>
                 <img src={poster_link} alt="" />
                 <div>
-                    <p>Episodio: "{episode_name}" {country_club ? "del country club" : "del gratis"} </p>
-                    <p>Número: {episode_number} </p>
+                    <h3>Episodio {episode_number}: <span>"{episode_name}"</span> {country_club ? "del country club" : "del gratis"} </h3>
+                    <p>{episode_description}</p>
                     {country_club
-                        ? <p>Escuchalo en hoytrasnoche.com</p>
-                        : <p>Escuchalo en tu app de podcast favorita</p>
+                        ? <p>Escuchalo <a href="https://hoytrasnoche.com">ACA</a></p>
+                        : <iframe src={embed_link} width="100%" height="190" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     }
                 </div>
             </div>

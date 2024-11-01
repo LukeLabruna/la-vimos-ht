@@ -8,7 +8,7 @@ const MovieDetailContainer = ({movies}) => {
     const [movie, setMovie] = useState()
 
     useEffect(() => {
-        const movie = movies.find(m => m.id == id)
+        const movie = movies.find(m => m.tmdb_id == id)
         setMovie(movie)
     }, [movies, id])
 

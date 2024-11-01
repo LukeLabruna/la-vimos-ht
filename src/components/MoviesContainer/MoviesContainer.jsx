@@ -8,7 +8,7 @@ const MoviesContainer = ({ movies, query }) => {
             <div className="moviesContainer">
                 {movies.length > 0
                     ? movies.map(movie => (
-                        <Link key={movie.id} to={`/movie/${movie.id}`}>
+                        <Link key={movie.tmdb_id} to={`/movie/${movie.tmdb_id}`}>
                             <img  src={movie.poster_link} alt="" />
                         </Link>
                     ))
