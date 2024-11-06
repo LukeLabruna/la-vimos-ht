@@ -1,29 +1,29 @@
-import { Link } from "react-router-dom"
+import "./Pagination.css"
 
-const Pagination = ({ page, hasPrevPage, hasNextPage, prevPage, nextPage }) => {
+const Pagination = ({ page, hasPrevPage, hasNextPage, prevPage, nextPage, handlePage }) => {
     return (
         <div class="pagination">
             {hasPrevPage ?
-                <Link to={`/page/${prevPage}`} className="prevNext"> Previous </Link>
+                <a onClick={() => handlePage(prevPage)} className="prevNext"> Anterior </a>
                 :
-                <a disabled className="disabled"> Previous </a>
+                <a disabled className="disabled"> Anterior </a>
             }
 
             <div class="numberPage">
                 {hasPrevPage
-                    ? <Link to={`/page/${prevPage}`}><button>{prevPage}</button></Link>
+                    ? <a onClick={() => handlePage(prevPage)} ><button>{prevPage}</button></a>
                     : <a disabled><button disabled> ... </button></a>
                 }
                 <a ><button class="currentPage">{page}</button></a>
                 {hasNextPage
-                    ? <Link to={`/page/${nextPage}`}><button>{nextPage}</button></Link>
+                    ? <a onClick={() => handlePage(nextPage)} ><button>{nextPage}</button></a>
                     : <a disabled><button disabled> ... </button></a>
                 }
             </div>
 
             {hasNextPage 
-            ?<Link to={`/page/${nextPage}`} class="prevNext"> Next </Link>
-            :<a disabled class="disabled"> Next </a>
+            ?<a onClick={() => handlePage(nextPage)} class="prevNext"> Siguiente </a>
+            :<a disabled class="disabled"> Siguiente </a>
             }
         </div>
     )

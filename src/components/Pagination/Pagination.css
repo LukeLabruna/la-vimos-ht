@@ -1,0 +1,37 @@
+.pagination {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    align-items: center;
+  }
+  
+  .numberPage {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .numberPage button {
+    min-width: 2rem;
+    text-align: center;
+    padding: 0.4rem;
+    color: #FFC545;
+    border: none;
+    background-color: #F45454;
+    cursor: pointer;
+  }
+  
+  .numberPage .currentPage {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .pagination .disabled {
+    color: grey;
+    cursor: not-allowed;
+  }
+
+  .pagination a {
+    cursor: pointer;
+  }
