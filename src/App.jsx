@@ -32,7 +32,7 @@ function App() {
       <NavBar handleChange={handleOnChange}/>
         <Routes>
           <Route path="/" element={<MoviesContainer query={query} movies={movies} />} />
-          <Route path="/movie/:id" element={<MovieDetailContainer movies={movies} />} />
+          <Route path="/movie/:id" element={<MovieDetailContainer />} />
         </Routes>
       </Router>
     </>

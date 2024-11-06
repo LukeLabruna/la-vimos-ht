@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom"
+import Pagination from "../Pagination/Pagination"
 import "./MoviesContainer.css"
+import { useEffect, useState } from "react"
 
 const MoviesContainer = ({ movies, query }) => {
+
+    const [ data, setData ] = useState(null)
+    
+    useEffect(() => { }, [])
+
+
     return (
         <main>
             <h1>{query}</h1>
@@ -14,6 +22,7 @@ const MoviesContainer = ({ movies, query }) => {
                     ))
                     : <p>No vimos esa pelicula</p>}
             </div>
+            <Pagination />
         </main>
     )
 }
