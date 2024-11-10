@@ -15,7 +15,7 @@ function App() {
   const handleSearchMovie = async (query) => {
     try {
       if (query.length >= 3) {
-        const movies = await axios.get(`http://localhost:8080/api/movies/search?query=${query}`)
+        const movies = await axios.get(`https://lahicimos-back.onrender.com/api/movies/search?query=${query}`)
         setSearchMovies(movies.data.data)
       } else {
         setSearchMovies(null)

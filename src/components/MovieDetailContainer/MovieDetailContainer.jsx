@@ -10,7 +10,7 @@ const MovieDetailContainer = () => {
 
     const movieFetch = async (id) => {
       try {
-        const movie = await axios.get(`http://localhost:8080/api/movies/id/${id}`)
+        const movie = await axios.get(`https://lahicimos-back.onrender.com/api/movies/id/${id}`)
         setMovie(movie.data.data)
       } catch (error) {
         console.log(error)

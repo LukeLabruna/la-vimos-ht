@@ -11,7 +11,7 @@ const MoviesContainer = ({searchMovies}) => {
     
     const fetchData = async (page) => {
         try {
-            const response = await axios.get(`http://localhost:8080/api/movies?page=${page}&sort=-episode_release_date`)
+            const response = await axios.get(`https://lahicimos-back.onrender.com/api/movies?page=${page}&sort=-episode_release_date`)
             setData(response.data.data)
         } catch (error) {
             console.log(error)
