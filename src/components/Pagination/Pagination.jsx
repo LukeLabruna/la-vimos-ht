@@ -2,19 +2,19 @@ import "./Pagination.css"
 
 const Pagination = ({ page, hasPrevPage, hasNextPage, prevPage, nextPage, handlePage }) => {
     return (
-        <div class="pagination">
+        <div className="pagination">
             {hasPrevPage ?
                 <a onClick={() => handlePage(prevPage)} className="prevNext"> Anterior </a>
                 :
                 <a disabled className="disabled"> Anterior </a>
             }
 
-            <div class="numberPage">
+            <div className="numberPage">
                 {hasPrevPage
                     ? <a onClick={() => handlePage(prevPage)} ><button>{prevPage}</button></a>
                     : <a disabled><button disabled> ... </button></a>
                 }
-                <a ><button class="currentPage">{page}</button></a>
+                <a ><button className="currentPage">{page}</button></a>
                 {hasNextPage
                     ? <a onClick={() => handlePage(nextPage)} ><button>{nextPage}</button></a>
                     : <a disabled><button disabled> ... </button></a>
@@ -22,8 +22,8 @@ const Pagination = ({ page, hasPrevPage, hasNextPage, prevPage, nextPage, handle
             </div>
 
             {hasNextPage 
-            ?<a onClick={() => handlePage(nextPage)} class="prevNext"> Siguiente </a>
-            :<a disabled class="disabled"> Siguiente </a>
+            ?<a onClick={() => handlePage(nextPage)} className="prevNext"> Siguiente </a>
+            :<a disabled className="disabled"> Siguiente </a>
             }
         </div>
     )
