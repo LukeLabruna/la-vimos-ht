@@ -30,7 +30,7 @@ function App() {
       <NavBar handleChange={handleSearchMovie}/>
         <Routes>
           <Route path="/" element={<MoviesContainer searchMovies={searchMovies} />} />
-          <Route path="/movie/:id" element={<MovieDetailContainer />} />
+          <Route path="/movie/:id" element={<MovieDetailContainer searchMovies={searchMovies} />} />
         </Routes>
       </Router>
     </>
