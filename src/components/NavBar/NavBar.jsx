@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import { useEffect } from "react"
 import "./NavBar.css"
 
-const NavBar = ({handleChange}) => {
+const NavBar = ({handleChange, setSearch}) => {
+
+  const location = useLocation()
+
+  useEffect(()=> {
+    setSearch(null)
+  }, [location.pathname])
 
   return (
     <header>
