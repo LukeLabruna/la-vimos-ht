@@ -31,7 +31,7 @@ Este repositorio contiene la interfaz de usuario de **La hicimos?**, una página
 
 La aplicación se conecta con un backend desarrollado específicamente para este proyecto, el cual gestiona la base de datos de películas y episodios de **Hoy Trasnoche**.
 - **Repositorio**: https://github.com/LukeLabruna/lahicimos-back
-- **Deploy**: https://lahicimos-back.onrender.com/
+- **Deploy**: https://lahicimos-back.vercel.app/
 
 ## Deploy
 
