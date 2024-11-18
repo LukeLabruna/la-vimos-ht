@@ -11,11 +11,11 @@
 
 .moviesContainer a {
     width: 30%;
-    box-shadow: 0 0 1rem #000000;
 }
 
 .moviesContainer a img {
     width: 100%;
+    box-shadow: 0 0 1rem #000000;
 }
 
 main {

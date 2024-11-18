@@ -6,7 +6,7 @@ import axios from "axios"
 import Loading from "../Loading/Loading"
 
 
-const MovieDetailContainer = ({ searchMovies }) => {
+const MovieDetailContainer = ({ searchMovies, searchLoading }) => {
   const { id } = useParams()
   const [movie, setMovie] = useState()
   const [loading, setLoading] = useState(false)
@@ -31,12 +31,12 @@ const MovieDetailContainer = ({ searchMovies }) => {
   return (
     <main>
       {searchMovies
-        ? <div className="moviesContainer">
-          <MovieList movies={searchMovies} />
-        </div>
-        : loading
-        ? <Loading />
-        : <MovieDetail {...movie} />
+        ? searchLoading 
+            ? <Loading /> 
+            : <div className="moviesContainer">
+                <MovieList movies={searchMovies} />
+              </div>
+        : loading ? <Loading /> : <MovieDetail {...movie} />
       }
     </main>
   )

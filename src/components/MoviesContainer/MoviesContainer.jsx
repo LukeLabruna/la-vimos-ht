@@ -6,7 +6,7 @@ import Loading from "../Loading/Loading"
 import "./MoviesContainer.css"
 import { useParams } from "react-router-dom"
 
-const MoviesContainer = ({ searchMovies }) => {
+const MoviesContainer = ({ searchMovies, searchLoading }) => {
 
     const { page } = useParams()
 
@@ -40,7 +40,7 @@ const MoviesContainer = ({ searchMovies }) => {
                 : <>
                     <div className="moviesContainer">
                         {searchMovies
-                            ? <MovieList movies={searchMovies} />
+                            ? searchLoading ? <Loading/> : <MovieList movies={searchMovies} />
                             : <MovieList movies={data.docs} />
                         }
                     </div>

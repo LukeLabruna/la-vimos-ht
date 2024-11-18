@@ -10,8 +10,10 @@ import axios from "axios"
 function App() {
 
   const [searchMovies, setSearchMovies] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleSearchMovie = async (query) => {
+    setLoading(true)
     try {
       if (query.length >= 3) {
         const movies = await axios.get(`https://lahicimos-back.vercel.app/api/movies/search?query=${query}`)
@@ -21,17 +23,19 @@ function App() {
       }
     } catch (error) {
       console.log(error)
+    } finally {
+      setLoading(false)
     }
   }
 
   return (
     <>
       <Router>
-      <NavBar handleChange={handleSearchMovie} search={searchMovies} setSearch={setSearchMovies}/>
+      <NavBar handleChange={handleSearchMovie} search={searchMovies} setSearch={setSearchMovies} />
         <Routes>
-          <Route path="/" element={<MoviesContainer searchMovies={searchMovies} />} />
-          <Route path="/:page" element={<MoviesContainer searchMovies={searchMovies} />} />
-          <Route path="/movie/:id" element={<MovieDetailContainer searchMovies={searchMovies} />} />
+          <Route path="/" element={<MoviesContainer searchMovies={searchMovies} searchLoading={loading}/>} />
+          <Route path="/:page" element={<MoviesContainer searchMovies={searchMovies} searchLoading={loading}/>} />
+          <Route path="/movie/:id" element={<MovieDetailContainer searchMovies={searchMovies} searchLoading={loading}/>} />
         </Routes>
       </Router>
     </>
