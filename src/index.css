@@ -20,3 +20,10 @@ body {
     background-position: center -9rem;
     background-size: 150%;
 }
+
+@media screen and (max-width: 700px) {
+    body {
+        background: none;
+        background-color: #000000;
+    }
+}
