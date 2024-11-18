@@ -1,29 +1,30 @@
+import { Link } from "react-router-dom"
 import "./Pagination.css"
 
-const Pagination = ({ page, hasPrevPage, hasNextPage, prevPage, nextPage, handlePage }) => {
+const Pagination = ({ page, hasPrevPage, hasNextPage, prevPage, nextPage }) => {
     return (
         <div className="pagination">
             {hasPrevPage ?
-                <a onClick={() => handlePage(prevPage)} className="prevNext"> Anterior </a>
+                <Link to={`/${prevPage}`} className="prevNext"> Anterior </Link>
                 :
-                <a disabled className="disabled"> Anterior </a>
+                <Link  className="disabled"> Anterior </Link >
             }
 
             <div className="numberPage">
                 {hasPrevPage
-                    ? <a onClick={() => handlePage(prevPage)} ><button>{prevPage}</button></a>
-                    : <a disabled><button disabled> ... </button></a>
+                    ? <Link to={`/${prevPage}`} ><button>{prevPage}</button></Link>
+                    : <Link ><button disabled> ... </button></Link >
                 }
-                <a ><button className="currentPage">{page}</button></a>
+                <Link><button className="currentPage">{page}</button></Link>
                 {hasNextPage
-                    ? <a onClick={() => handlePage(nextPage)} ><button>{nextPage}</button></a>
-                    : <a disabled><button disabled> ... </button></a>
+                    ? <Link to={`/${nextPage}`} ><button>{nextPage}</button></Link>
+                    : <Link ><button disabled> ... </button></Link >
                 }
             </div>
 
             {hasNextPage 
-            ?<a onClick={() => handlePage(nextPage)} className="prevNext"> Siguiente </a>
-            :<a disabled className="disabled"> Siguiente </a>
+            ?<Link to={`/${nextPage}`} className="prevNext"> Siguiente </Link>
+            :<Link  className="disabled"> Siguiente </Link >
             }
         </div>
     )

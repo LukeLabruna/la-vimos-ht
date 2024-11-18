@@ -4,11 +4,13 @@ import Pagination from "../Pagination/Pagination"
 import MovieList from "../MovieList/MovieList"
 import Loading from "../Loading/Loading"
 import "./MoviesContainer.css"
+import { useParams } from "react-router-dom"
 
 const MoviesContainer = ({ searchMovies }) => {
 
+    const { page } = useParams()
+
     const [data, setData] = useState({})
-    const [page, setPage] = useState(1)
     const [loading, setLoading] = useState(false)
 
     const fetchData = async (page) => {
@@ -16,7 +18,7 @@ const MoviesContainer = ({ searchMovies }) => {
         setLoading(true)
 
         try {
-            const response = await axios.get(`https://lahicimos-back.vercel.app/api/movies?page=${page}&sort=-episode_release_date`)
+            const response = await axios.get(`https://lahicimos-back.vercel.app/api/movies?page=${page ? page : 1}&sort=-episode_release_date`)
             setData(response.data.data)
         } catch (error) {
             console.log(error)
@@ -26,17 +28,14 @@ const MoviesContainer = ({ searchMovies }) => {
 
     }
 
-    const handlePage = (page) => {
-        setPage(page)
-    }
-
     useEffect(() => {
         fetchData(page)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }, [page])
 
     return (
         <main>
-            { /* loading
+            { loading
                 ? <Loading />
                 : <>
                     <div className="moviesContainer">
@@ -45,10 +44,9 @@ const MoviesContainer = ({ searchMovies }) => {
                             : <MovieList movies={data.docs} />
                         }
                     </div>
-                    <Pagination handlePage={handlePage} page={data.page} hasNextPage={data.hasNextPage} hasPrevPage={data.hasPrevPage} prevPage={data.prevPage} nextPage={data.nextPage} />
+                    <Pagination page={data.page} hasNextPage={data.hasNextPage} hasPrevPage={data.hasPrevPage} prevPage={data.prevPage} nextPage={data.nextPage} />
                 </>
-                    */}
-                    <Loading />
+                    }
         </main>
     )
 }

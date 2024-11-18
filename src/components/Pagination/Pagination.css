@@ -1,8 +1,8 @@
 .pagination {
     margin: 2rem auto;
     display: flex;
-    justify-content: space-around;
-    width: 20%;
+    justify-content: center;
+    gap: 0.5rem;
     align-items: center;
   }
   
@@ -34,4 +34,5 @@
 
   .pagination a {
     cursor: pointer;
+    color: #FFC545;
   }

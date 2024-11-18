@@ -27,9 +27,10 @@ function App() {
   return (
     <>
       <Router>
-      <NavBar handleChange={handleSearchMovie} setSearch={setSearchMovies} search={searchMovies}/>
+      <NavBar handleChange={handleSearchMovie} search={searchMovies} setSearch={setSearchMovies}/>
         <Routes>
           <Route path="/" element={<MoviesContainer searchMovies={searchMovies} />} />
+          <Route path="/:page" element={<MoviesContainer searchMovies={searchMovies} />} />
           <Route path="/movie/:id" element={<MovieDetailContainer searchMovies={searchMovies} />} />
         </Routes>
       </Router>
