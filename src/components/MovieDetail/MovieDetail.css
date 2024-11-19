@@ -1,4 +1,4 @@
-.movieDetail > div {
+.movieDetail>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     margin: 1rem auto;
 }
 
-.movieDetail > div img {
+.movieDetail>div img {
     width: 45%;
 }
 
@@ -28,6 +28,16 @@
 
 .movieDetail p {
     font-size: 1rem;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 
+@media screen and (max-width: 900px) {
+    .movieDetail > div {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .movieDetail>div img {
+        width: 100%;
+    }
+}

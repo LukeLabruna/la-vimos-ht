@@ -21,9 +21,9 @@ body {
     background-size: 150%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     body {
         background: none;
-        background-color: #000000;
+        background-color: #182e33;
     }
 }

@@ -24,3 +24,15 @@ main {
     text-transform: uppercase;
     min-height: 100vh;
 }
+
+@media screen and (max-width: 900px) {
+    main {
+        margin-top: 10rem;
+    }
+    .moviesContainer {
+        width: 95%;
+    }
+    .moviesContainer a {
+        width: 100%;
+    }
+}
