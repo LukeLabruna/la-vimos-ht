@@ -1,0 +1,46 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #182e33;
+    padding: 0.5rem;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    color: #FAFAFA;
+}
+
+footer .socialMedia {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+footer .socialMedia i {
+    color: #FAFAFA;
+    font-size: 1.2rem;
+}
+
+footer img {
+    height: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+        background-color: #000000;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    footer img {
+        height: 4rem;
+    }
+
+    footer .socialMedia i {
+        font-size: 2rem;
+    }
+}

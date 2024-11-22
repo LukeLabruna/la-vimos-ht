@@ -1,10 +1,11 @@
 import { useState } from "react"
 import NavBar from "./components/NavBar/NavBar"
 import MoviesContainer from "./components/MoviesContainer/MoviesContainer"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import MovieDetailContainer from "./components/MovieDetailContainer/MovieDetailContainer"
-import './App.css'
+import Footer from "./components/Footer/Footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import axios from "axios"
+import './App.css'
 
 
 function App() {
@@ -31,12 +32,13 @@ function App() {
   return (
     <>
       <Router>
-      <NavBar handleChange={handleSearchMovie} search={searchMovies} setSearch={setSearchMovies} />
+        <NavBar handleChange={handleSearchMovie} search={searchMovies} setSearch={setSearchMovies} />
         <Routes>
-          <Route path="/" element={<MoviesContainer searchMovies={searchMovies} searchLoading={loading}/>} />
-          <Route path="/:page" element={<MoviesContainer searchMovies={searchMovies} searchLoading={loading}/>} />
-          <Route path="/movie/:id" element={<MovieDetailContainer searchMovies={searchMovies} searchLoading={loading}/>} />
+          <Route path="/" element={<MoviesContainer searchMovies={searchMovies} searchLoading={loading} />} />
+          <Route path="/:page" element={<MoviesContainer searchMovies={searchMovies} searchLoading={loading} />} />
+          <Route path="/movie/:id" element={<MovieDetailContainer searchMovies={searchMovies} searchLoading={loading} />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   )

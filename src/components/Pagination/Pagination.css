@@ -35,4 +35,5 @@
   .pagination a {
     cursor: pointer;
     color: #FFC545;
+    text-decoration: none;
   }
