@@ -7,8 +7,8 @@ const Footer = () => {
             <p>© 2024 Hoy Trasnoche. Todos los derechos reservados.</p>
             <div className="socialMedia">
                 <p>LukeLabruna</p>
-                <a target="_blank" href="https://www.linkedin.com/in/lucaslabruna/"><i class="fa-brands fa-linkedin"></i></a>
-                <a target="_blank" href="https://github.com/LukeLabruna"><i class="fa-brands fa-square-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/lucaslabruna/"><i className="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="https://github.com/LukeLabruna"><i className="fa-brands fa-square-github"></i></a>
             </div>
         </footer>
     )
