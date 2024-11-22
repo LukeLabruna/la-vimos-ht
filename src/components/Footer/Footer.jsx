@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom"
 import "./Footer.css"
 
 const Footer = () => {
     return (
         <footer>
-            <Link to={"/"}><img src="/img/hoytrasnoche-logo-blanco.png" alt="logo hoy trasnoche" /></Link>
+            <a target="_blank" href="https://hoytrasnoche.com"><img src="/img/hoytrasnoche-logo-blanco.png" alt="logo hoy trasnoche" /></a>
             <p>© 2024 Hoy Trasnoche. Todos los derechos reservados.</p>
             <div className="socialMedia">
                 <p>LukeLabruna</p>
