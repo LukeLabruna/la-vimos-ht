@@ -3,6 +3,8 @@
     {
       "src": "/(.*)",
       "dest": "/index.html"
-    }
+    },
+    { "src": "/manifest.webmanifest", "dest": "/manifest.webmanifest" },
+    { "src": "/registerSW.js", "dest": "/registerSW.js" }
   ]
 }
