@@ -29,7 +29,24 @@ export default defineConfig({
           { src: "/icon/android-icon-144x144.png", sizes: "144x144", type: "image/png", density: "3.0" },
           { src: "/icon/android-icon-192x192.png", sizes: "192x192", type: "image/png", density: "4.0" }
         ]
+      },
+      workbox: {
+        runtimeCaching: [
+          {
+            urlPattern: ({ request, url }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'pages-cache',
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 30 * 24 * 60 * 60 // 30 días
+              }
+            }
+          }
+        ]
       }
-    })
+    }),
+    
   ]
 });
+
