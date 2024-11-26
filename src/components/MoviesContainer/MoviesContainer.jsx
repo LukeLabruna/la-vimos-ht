@@ -40,11 +40,15 @@ const MoviesContainer = ({ searchMovies, searchLoading }) => {
                 : <>
                     <div className="moviesContainer">
                         {searchMovies
-                            ? searchLoading ? <Loading/> : <MovieList movies={searchMovies} />
+                            ? searchLoading 
+                                ? <Loading/> 
+                                : typeof searchMovies === "string" 
+                                    ? <h2> {searchMovies} </h2> 
+                                    : <MovieList movies={searchMovies} />
                             : <MovieList movies={data.docs} />
                         }
                     </div>
-                    <Pagination page={data.page} hasNextPage={data.hasNextPage} hasPrevPage={data.hasPrevPage} prevPage={data.prevPage} nextPage={data.nextPage} />
+                   {!searchMovies && <Pagination page={data.page} hasNextPage={data.hasNextPage} hasPrevPage={data.hasPrevPage} prevPage={data.prevPage} nextPage={data.nextPage} />}
                 </>
                     }
         </main>

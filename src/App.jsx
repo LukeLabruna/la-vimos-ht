@@ -23,7 +23,10 @@ function App() {
         setSearchMovies(null)
       }
     } catch (error) {
-      console.log(error)
+      if (error.status === 404) {
+        console.log(error.response.data.message)
+        setSearchMovies("Esa no la hicimos")
+      }
     } finally {
       setLoading(false)
     }
